@@ -22,9 +22,9 @@ const SearchBar: React.FC = () => {
     <>
       <div className="flex-2 flex flex-col gap-1">
         <div className="flex flex-row gap-1">
-          <span>Start date</span>
+          <span className="font-semibold text-lg">Start date</span>
           <SwapRightOutlined />
-          <span>End date</span>
+          <span className="font-semibold text-lg">End date</span>
         </div>
         <RangePicker
           disabledDate={disabledDate}
@@ -34,9 +34,9 @@ const SearchBar: React.FC = () => {
       </div>
       <div className="flex-2 flex flex-col pl-2 gap-1">
         <div className="flex flex-row gap-1">
-          <span>From</span>
+          <span className="font-semibold text-lg">From</span>
           <SwapRightOutlined />
-          <span>To</span>
+          <span className="font-semibold text-lg">To</span>
         </div>
         <div className="flex flex-row gap-2">
           <Select
@@ -56,13 +56,13 @@ const SearchBar: React.FC = () => {
         </div>
       </div>
       <div className="flex-1 px-2 flex flex-col gap-1">
-        <div className="self-start">Budget</div>
+        <div className="self-start font-semibold text-lg">Budget</div>
         <input
           type="string"
           className="border border-gray-300 rounded-md outline-none pl-2 h-10"
         />
       </div>
-      <button className="flex-1 text-white border-none bg-green-400 rounded-lg font-bold m-2">
+      <button className="flex-1 text-white border-none bg-green-400 rounded-lg font-bold m-2 text-xl">
         Search
       </button>
     </>
