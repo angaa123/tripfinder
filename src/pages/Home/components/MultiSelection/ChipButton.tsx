@@ -13,8 +13,8 @@ const ChipButton: React.FC<{ labelName: string }> = ({ labelName }) => {
     <button
       className={
         choosen
-          ? "flex flex-row items-center gap-2 border border-green-400 p-1.5 rounded-md bg-green-400"
-          : "flex flex-row items-center gap-2 border p-1.5 rounded-md"
+          ? "flex flex-row items-center gap-2 border border-green-400 p-2 rounded-3xl bg-green-400"
+          : "flex flex-row items-center gap-2 border p-2 rounded-3xl"
       }
       onClick={() => setChoosen(!choosen)}
     >

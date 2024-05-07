@@ -60,6 +60,7 @@ const SearchBar: React.FC = () => {
         <input
           type="string"
           className="border border-gray-300 rounded-md outline-none pl-2 h-10"
+          placeholder="Your budget"
         />
       </div>
       <button className="flex-1 text-white border-none bg-green-400 rounded-lg font-bold m-2 text-xl">
