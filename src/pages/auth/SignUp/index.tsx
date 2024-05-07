@@ -6,8 +6,8 @@ import InformationInput from "../../../components/InfomationInput";
 const SignUp: React.FC = () => {
   return (
     <>
-      <div className="flex flex-row items-center gap-8">
-        <div className="flex-1 max-w-lg">
+      <div className="h-screen flex flex-row justify-center items-center gap-8 bg-white">
+        <div className="max-w-lg min-w-80">
           <Carousel autoplay>
             {carouselListImage.map((imageLink: string) => {
               return (
@@ -22,11 +22,11 @@ const SignUp: React.FC = () => {
             })}
           </Carousel>
         </div>
-        <div className="flex-1 w-96">
+        <div className="w-96">
           <h3 className="font-bold text-3xl">
             Trip<span className="text-green-400">Finder</span>
           </h3>
-          <h2 className="text-2xl font-bold text-start">SignUp</h2>
+          <h2 className="text-2xl font-bold text-start">Sign Up</h2>
           <p className="text-start">Let's sign up and explore TripFinder</p>
           <div className="my-2 flex flex-col gap-4">
             <InformationInput labelName="Email" />
@@ -38,10 +38,10 @@ const SignUp: React.FC = () => {
               labelName="Reconfirm Password"
               isPassword={true}
             />
-            <button className="bg-green-400 text-xl p-2 border-none focus:outline-none hover:border-none text-white font-bold">
+            <button className="bg-green-400 rounded-lg text-xl p-2 border-none focus:outline-none hover:border-none text-white font-bold">
               Create Account
             </button>
-            <div>
+            <div className="text-black">
               Already have an account ?{" "}
               <Link
                 to={"/login"}
