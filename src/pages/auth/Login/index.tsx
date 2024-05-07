@@ -5,13 +5,21 @@ import { carouselListImage } from "../../../assets/carouselListImage";
 import InformationInput from "../../../components/InfomationInput";
 
 const Login: React.FC = () => {
+  document.title = "Login";
   return (
     <>
       <div className="h-screen flex flex-row justify-center items-center gap-8 bg-white">
         <div className="w-96">
-          <h3 className="font-bold text-3xl">
-            Trip<span className="text-green-400">Finder</span>
-          </h3>
+          <div className="justify-center mb-6 flex flex-row items-center gap-1">
+            <Image
+              src="https://cdn-icons-png.flaticon.com/128/5333/5333676.png"
+              width={30}
+              height={30}
+            />
+            <h3 className="font-bold text-3xl">
+              Trip<span className="text-green-400">Finder</span>
+            </h3>
+          </div>
           <h2 className="text-2xl font-bold text-start">Login</h2>
           <p className="text-start">Login to access your account</p>
           <div className="my-2 flex flex-col gap-5">
