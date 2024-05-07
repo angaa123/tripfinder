@@ -44,14 +44,14 @@ const SearchBar: React.FC = () => {
             isSearchable
             options={options}
             placeholder="From"
-            className="min-w-40"
+            className="min-w-40 h-10"
           />
           <Select
             isClearable
             isSearchable
             options={options}
             placeholder="To"
-            className="min-w-40"
+            className="min-w-40 h-10"
           />
         </div>
       </div>
@@ -59,7 +59,7 @@ const SearchBar: React.FC = () => {
         <div className="self-start">Budget</div>
         <input
           type="string"
-          className="border border-gray-300 rounded-lg outline-none h-10 pl-2"
+          className="border border-gray-300 rounded-md outline-none pl-2 h-10"
         />
       </div>
       <button className="flex-1 text-white border-none bg-green-400 rounded-lg font-bold m-2">
