@@ -53,7 +53,7 @@ const SignUp: React.FC = () => {
               Already have an account ?{" "}
               <Link
                 to={"/login"}
-                className="text-green-400 hover:text-green-600"
+                className="text-green-400 hover:text-green-600 font-semibold"
               >
                 Login
               </Link>

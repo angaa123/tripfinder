@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      customTitle: ['"Volkhov"', "serif"],
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
