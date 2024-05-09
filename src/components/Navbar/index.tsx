@@ -19,10 +19,15 @@ const Navbar: React.FC = () => {
       </div>
       <div className="flex flex-row gap-24">
         <Link to={"/"}>
-          <span className="text-white text-xl font-bold">Home</span>
+          <span className="text-xl font-medium">Home</span>
+        </Link>
+        <Link to={"/explore"}>
+          <span className="text-xl font-medium">Explore</span>
         </Link>
         <Link to={"/login"}>
-          <span className="text-white text-xl font-bold">Login</span>
+          <span className="text-xl font-bold text-white px-3 py-1.5 rounded-md bg-green-400">
+            Login
+          </span>
         </Link>
       </div>
     </div>
