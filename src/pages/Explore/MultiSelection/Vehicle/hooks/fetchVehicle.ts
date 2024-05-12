@@ -1,4 +1,4 @@
-import { backend_dev } from "../../../../../../service";
+import { backend_dev } from "../../../../../service";
 
 export const fetchVehicle = async (
   from?: { value: string; label: string } | null,

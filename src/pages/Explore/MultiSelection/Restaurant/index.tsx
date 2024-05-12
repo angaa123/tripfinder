@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { options } from "../../../../../assets/locationSelecion";
-import { fetchAttraction } from "./hooks/fetchAttraction";
+import { options } from "../../../../assets/locationSelecion";
+import { fetchRestaurant } from "./hooks/fetchRestaurant";
 
-const Attraction: React.FC = () => {
+const Restaurant: React.FC = () => {
   const [province, setProvince] = useState<{
     value: string;
     label: string;
@@ -19,9 +19,9 @@ const Attraction: React.FC = () => {
         onChange={setProvince}
         placeholder="Province"
       />
-      <button onClick={() => fetchAttraction(province)}>Search</button>
+      <button onClick={() => fetchRestaurant(province)}>Search</button>
     </div>
   );
 };
 
-export default Attraction;
+export default Restaurant;
