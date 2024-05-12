@@ -19,7 +19,7 @@ const Explore: React.FC = () => {
           that worth considering
         </div>
         <MultiSelection />
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <img
             className="rounded w-4/5"
             src="https://images.unsplash.com/photo-1606802029835-7dd0570bf864"
@@ -30,7 +30,7 @@ const Explore: React.FC = () => {
             className="rounded w-4/5"
             src="https://images.unsplash.com/photo-1606802029835-7dd0570bf864"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
