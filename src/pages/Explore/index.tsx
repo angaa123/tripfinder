@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import MultiSelection from "../Home/components/MultiSelection";
+import MultiSelection from "./MultiSelection";
 
 const Explore: React.FC = () => {
   return (
