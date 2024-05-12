@@ -6,6 +6,7 @@ const ChipButton: React.FC<{
   setChoosen: Dispatch<SetStateAction<string>>;
   choosen: string;
 }> = ({ labelName, setChoosen, choosen }) => {
+  // console.log(choosen);
   return (
     <button
       className={
@@ -30,7 +31,7 @@ const ChipButton: React.FC<{
           className={choosen === labelName ? "text-white" : "text-black"}
         />
       )}
-      {labelName === "Culinary" && (
+      {labelName === "Restaurant" && (
         <FaUtensils
           size={20}
           className={choosen === labelName ? "text-white" : "text-black"}
@@ -42,15 +43,12 @@ const ChipButton: React.FC<{
           className={choosen === labelName ? "text-white" : "text-black"}
         />
       )}
-      {labelName === "Best places" && (
+      {labelName === "Attraction" && (
         <FaLocationDot
           size={20}
           className={choosen === labelName ? "text-white" : "text-black"}
         />
       )}
-      {/* {labelName === "Whole trip" && (
-        <FaMap size={20} className={isClicked ? "text-white" : "text-black"} />
-      )} */}
     </button>
   );
 };

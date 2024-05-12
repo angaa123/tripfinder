@@ -18,9 +18,7 @@ const Explore: React.FC = () => {
           breathtaking landscapes. Apart from that culinary is another aspect
           that worth considering
         </div>
-        <div className="justify-center flex flex-row gap-4 p-2">
-          <MultiSelection />
-        </div>
+        <MultiSelection />
         <div className="flex justify-center">
           <img
             className="rounded w-4/5"

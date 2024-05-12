@@ -6,7 +6,7 @@ export const getHotel = async (location: string) => {
     // console.log("locationStandard: ", standardLocation);
     // console.log("full string: ", backend_dev.hotel + standardLocation);
     const response = await fetch(
-      backend_dev.hotel + `?province=${standardLocation}`
+      backend_dev.search + `hotels?province=${standardLocation}`
     );
     return await response.json();
   }

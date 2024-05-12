@@ -1,3 +1,3 @@
 export const backend_dev = {
-  hotel: "http://localhost:8000/search/hotels",
+  search: "https://tripfinder-search-latest.onrender.com/",
 };
