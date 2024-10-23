@@ -1,68 +1,106 @@
+import React, { useEffect, useState } from "react";
 import { Carousel, Image } from "antd";
 import { Link } from "react-router-dom";
 import { carouselListImage } from "../../../assets/carouselListImage";
-import InformationInput from "../../../components/InfomationInput";
 
 const SignUp: React.FC = () => {
-  document.title = "SignUp";
-  return (
-    <>
-      <div className="h-screen flex flex-row justify-center items-center gap-8 bg-white">
-        <div className="max-w-lg min-w-80">
-          <Carousel autoplay>
-            {carouselListImage.map((imageLink: string) => {
-              return (
-                <Image
-                  width={500}
-                  height={600}
-                  preview={false}
-                  className="rounded-lg"
-                  src={imageLink}
-                />
-              );
-            })}
-          </Carousel>
-        </div>
-        <div className="w-96">
-          <div className="justify-center mb-6 flex flex-row items-center gap-1">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/128/5333/5333676.png"
-              width={30}
-              height={30}
-            />
-            <h3 className="font-bold text-3xl">
-              Trip<span className="text-green-400">Finder</span>
-            </h3>
-          </div>
-          <h2 className="text-2xl font-bold text-start">Sign Up</h2>
-          <p className="text-start">Let's sign up and explore TripFinder</p>
-          <div className="my-2 flex flex-col gap-4">
-            <InformationInput labelName="Email" />
-            <InformationInput labelName="First Name" />
-            <InformationInput labelName="Last Name" />
-            <InformationInput labelName="Phone number" />
-            <InformationInput labelName="Password" isPassword={true} />
-            <InformationInput
-              labelName="Reconfirm Password"
-              isPassword={true}
-            />
-            <button className="bg-green-400 rounded-lg text-xl p-2 border-none focus:outline-none hover:border-none text-white font-bold">
-              Create Account
-            </button>
-            <div className="text-black">
-              Already have an account ?{" "}
-              <Link
-                to={"/login"}
-                className="text-green-400 hover:text-green-600 font-semibold"
-              >
-                Login
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 766);
+		};
+
+		handleResize(); // Check on initial load
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	return (
+		<div className="h-screen flex justify-center items-center gap-8 bg-white">
+			<div className="h-screen flex flex-col md:flex-row md:justify-center md:items-center gap-8 bg-white">
+				<div className="max-w-lg min-w-80 mt-auto  md:mt-0 md:mb-0">
+					<Carousel autoplay>
+						{carouselListImage.map((imageLink: string) => (
+							<Image
+								key={imageLink}
+								width={isMobile ? 250 : 500}
+								height={isMobile ? 300 : 600}
+								preview={false}
+								className="rounded-lg"
+								src={imageLink}
+							/>
+						))}
+					</Carousel>
+				</div>
+				<div className="w-96 m-auto">
+					<div className="justify-center mb-6 flex flex-row items-center gap-1">
+						<Image
+							src="https://cdn-icons-png.flaticon.com/128/5333/5333676.png"
+							width={30}
+							height={30}
+						/>
+						<h3 className="font-bold text-3xl">
+							Trip<span className="text-green-400">Finder</span>
+						</h3>
+					</div>
+					<h2 className="text-2xl font-bold text-start">Sign Up</h2>
+					<p className="text-start">Let's sign up and explore TripFinder</p>
+					<div className="my-2 flex flex-col gap-4">
+						<input
+							type="email"
+							name="email"
+							placeholder="Email"
+							className="border-2 border-green-400 rounded-lg p-2 text-xl focus:outline-none"
+							id=""
+						/>
+						<input
+							type="text"
+							name="firstName"
+							placeholder="First Name"
+							className="border-2 border-green-400 rounded-lg p-2 text-xl focus:outline-none"
+							id=""
+						/>
+						<input
+							type="text"
+							name="lastName"
+							placeholder="Last Name"
+							className="border-2 border-green-400 rounded-lg p-2 text-xl focus:outline-none"
+							id=""
+						/>
+						<input
+							type="nubmer"
+							name="phoneNumber"
+							placeholder="Phone Number"
+							className="border-2 border-green-400 rounded-lg p-2 text-xl focus:outline-none"
+							id=""
+						/>
+						<input
+							type="password"
+							name="password"
+							placeholder="Password"
+							className="border-2 border-green-400 rounded-lg p-2 text-xl focus:outline-none"
+							id=""
+						/>
+						<button className="bg-green-400 rounded-lg text-xl p-2 border-none focus:outline-none hover:border-none text-white font-bold">
+							Create Account
+						</button>
+						<div className="text-black">
+							Already have an account ?{" "}
+							<Link
+								to={"/login"}
+								className="text-green-400 hover:text-green-600 font-semibold"
+							>
+								Login
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default SignUp;
